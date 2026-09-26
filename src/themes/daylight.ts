@@ -1,0 +1,70 @@
+import type { Theme } from "../types";
+
+/**
+ * Daylight: a page to read by a window — warm cream paper, deep sepia ink,
+ * one burnt-sienna accent. Light only: paper has no night mode.
+ *
+ * The state colours are prifly's hues warmed a step towards the paper and
+ * darkened where cream costs them contrast, so a failed session is still red
+ * and a finished one still green.
+ */
+export const daylight: Theme = {
+  id: "daylight",
+  name: "Daylight",
+  description: "Warm cream paper and deep sepia ink, for reading in a bright room. Light only.",
+  light: {
+    background: "#f6efdd",
+    foreground: "#3a2a1a",
+    card: "#fbf7ec",
+    "card-foreground": "#3a2a1a",
+    popover: "#fdfaf2",
+    "popover-foreground": "#3a2a1a",
+    primary: "#8c4a1c",
+    "primary-foreground": "#fffaf0",
+    secondary: "#ede3cc",
+    "secondary-foreground": "#4d3822",
+    muted: "#efe6d1",
+    "muted-foreground": "#65503a",
+    accent: "#e8dcc0",
+    "accent-foreground": "#3a2a1a",
+    destructive: "#a5321f",
+    "destructive-foreground": "#fffaf0",
+    border: "#ddd0b3",
+    input: "#d4c5a4",
+    ring: "#b3662e",
+    favourite: "#c28a00",
+    "favourite-surface": "#f5d36b",
+    backdrop: "#2b1d10",
+    "badge-foreground": "#fffaf0",
+    "terminal-background": "#2b2118",
+    "terminal-foreground": "#f3e9d2",
+    "terminal-bar": "#3a2d21",
+    "terminal-bar-foreground": "#e3d5b8",
+    "viz-grid": "#e0d4b9",
+
+    "viz-muted": "#8f8270",
+    "viz-good": "#3f8f2a",
+    "viz-warning": "#e0a226",
+    "viz-critical": "#c0412e",
+    "viz-running": "#3a74b8",
+    "viz-merged": "#8a5cae",
+    "ink-good": "#2f6b1c",
+    "ink-warning": "#824a00",
+    "ink-critical": "#a3301f",
+    "ink-running": "#1f5a99",
+    "ink-merged": "#6a3f8f",
+    "ink-agent": "#1c6470",
+    "ink-muted": "#6b5c49",
+    "ink-repeat": "#1f6360",
+    "ink-wakeup": "#8f2f6e",
+    "mode-manual": "#665a4c",
+    "mode-plan": "#1f6360",
+    "mode-accept": "#7a2fc2",
+    "mode-danger": "#a0283a",
+    "mode-auto": "#855f16",
+    "kind-wsl": "#2b7a45",
+    "kind-windows": "#2f65b0",
+    "kind-cloud": "#7a4fb0",
+    "kind-ssh": "#95600c",
+  },
+};

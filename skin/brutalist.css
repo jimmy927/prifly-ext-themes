@@ -1,0 +1,71 @@
+/* Brutalist: the shapes that go with the Brutalist theme's colours — thick
+ * black frames, hard offset shadows, square corners.
+ *
+ * A skin is laid over the window for as long as this extension is enabled,
+ * whatever theme is picked, and it stacks with other extensions' skins. So
+ * everything here sits inside one style query that is true only while the
+ * Brutalist theme is drawn: the theme sets two tokens to values chosen as its
+ * signature (`src/themes/brutalist.ts`, BRUTALIST_SIGNATURE), and under any
+ * other theme — or prifly's own — this sheet does nothing.
+ *
+ * The rules for a skin that must still stack:
+ * - only [data-part] regions, never body, :root or *;
+ * - colours only from tokens (var(--foreground), var(--primary)), never a
+ *   literal, so the theme's contrast check stays the whole story;
+ * - no token is set here — not even --radius, which is not a theme token: the
+ *   corners are squared with border-radius on the regions instead;
+ * - no !important, no layout: frames and shadows are box-shadows, which take
+ *   no space, so nothing moves by a pixel. */
+
+@container style(--backdrop: #010101) and style(--viz-grid: #000000) {
+  /* Square corners, everywhere inside the window. */
+  [data-part="window"],
+  [data-part="window"] * {
+    border-radius: 0;
+  }
+
+  /* The bars: a colour block each, ruled off with a thick line. */
+  [data-part="header"] {
+    background: var(--primary);
+    box-shadow: inset 0 -3px 0 var(--foreground);
+  }
+
+  [data-part="status-bar"] {
+    background: var(--secondary);
+    color: var(--foreground);
+    box-shadow: inset 0 3px 0 var(--foreground);
+  }
+
+  [data-part="update-banner"] {
+    background: var(--accent);
+    box-shadow: inset 0 -3px 0 var(--foreground);
+  }
+
+  [data-part="composer"] {
+    box-shadow: inset 0 3px 0 var(--foreground);
+  }
+
+  /* The box you type in: framed, with a hard shadow. */
+  [data-part="composer"] textarea {
+    background: var(--card);
+    box-shadow:
+      0 0 0 2px var(--foreground),
+      4px 4px 0 var(--foreground);
+  }
+
+  /* Your messages: a white card, a black frame, a shadow cast down-right. */
+  [data-part="human-message"] {
+    background: var(--card);
+    box-shadow:
+      0 0 0 2px var(--foreground),
+      5px 5px 0 var(--foreground);
+  }
+
+  /* The window's buttons: a frame and a small shadow. */
+  [data-part="header"] button,
+  [data-part="composer"] button {
+    box-shadow:
+      0 0 0 2px var(--foreground),
+      2px 2px 0 var(--foreground);
+  }
+}
