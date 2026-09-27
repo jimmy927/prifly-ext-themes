@@ -1,76 +1,79 @@
 import type { Theme } from "../types";
 
 /**
- * Studio: inspired by Adobe's Spectrum 2 design system, the look of its
- * creative apps. The name is Adobe's, so the theme has its own; the colours
- * are Spectrum's own tokens (`@adobe/spectrum-tokens` 15.4, Apache-2.0),
- * resolved for light and dark:
+ * Studio: inspired by Adobe Photoshop. The name is Adobe's, so the theme has
+ * its own. The greys are Photoshop's own, read off pixels: dark is its
+ * default "Dark" interface, light its "Lightest".
  *
- * - surfaces: layer 1 (#f8f8f8 / #1b1b1b) for the window, layer 2 and the
- *   elevated colour (#ffffff / #222222) for cards and popovers, the gray-75
- *   and gray-100 steps for chips and quiet buttons, and the body and subdued
- *   content greys for text;
- * - the accent: prifly draws links in the primary, so it takes the accent's
- *   pressed blue-1000 (#274dea) by day and blue-1100 by night — the #3b63fb
- *   default sits under 4.5:1 on the chip grey; the #3b63fb blue colours the
- *   running bars, and the focus-indicator blue the ring;
- * - states: the "visual" colours (positive green, negative red) for bars and
- *   dots, and the scales' 1000 (light) or 1100 (dark) steps for words —
- *   green, red, blue, purple, cyan, seafoam, magenta and cinnamon. Warning
- *   is the yellow scale, not Spectrum's notice orange, which prifly's check
- *   finds too close to the negative red.
+ * - greys: from the Photoshop 2025 window on Wikipedia and Adobe's UXP design
+ *   guide (AdobeDocs/uxp-photoshop, design/ux-images: dark-themes.png,
+ *   light-themes.png, photoshop-panel.png). Dark: #535353 panels, menu bar
+ *   and toolbar; #424242 tab strips and panel headers; #6b6b6b the selected
+ *   layer row; #282828 the canvas surround (here the terminal); #383838
+ *   wells; #e3e3e3 text, #b9b9b9 labels. Light: #f0f0f0 panels, #d1d1d1 tab
+ *   strips, #e1e1e1 the canvas surround, #bfbfbf rules, white fields with a
+ *   #d3d3d3 edge, #4b4b4b text, #8b8b8b labels.
+ * - colours: Spectrum's (`@adobe/spectrum-tokens` 15.4, Apache-2.0), the
+ *   system Photoshop's panels are drawn in — the #3b63fb accent, the
+ *   positive, negative and purple, cyan, seafoam, magenta and cinnamon
+ *   scales. Warning is the yellow scale, since prifly's check finds the
+ *   notice orange too close to the negative red.
+ * - lifted: Photoshop's grey is a mid-grey, so on dark every coloured word,
+ *   the link blue and the labels are Spectrum's hue stepped toward white
+ *   until it reads at 4.5:1 on the panel greys (bars and dots at 3:1); on
+ *   light the labels and the link blue a step darker for the #e1e1e1 wells.
  */
 export const studio: Theme = {
   id: "studio",
   name: "Studio",
   description:
-    "Inspired by Adobe's Spectrum 2: neutral greys, the bright accent blue and the creative apps' state colours.",
+    "Inspired by Adobe Photoshop: its own interface greys, with the Spectrum accent blue and state colours.",
   light: {
-    background: "#f8f8f8",
-    foreground: "#292929",
+    background: "#f0f0f0",
+    foreground: "#4b4b4b",
     card: "#ffffff",
-    "card-foreground": "#292929",
+    "card-foreground": "#4b4b4b",
     popover: "#ffffff",
-    "popover-foreground": "#292929",
+    "popover-foreground": "#4b4b4b",
     primary: "#274dea",
     "primary-foreground": "#ffffff",
-    secondary: "#e9e9e9",
-    "secondary-foreground": "#292929",
-    muted: "#f3f3f3",
-    "muted-foreground": "#505050",
-    accent: "#e5f0fe",
-    "accent-foreground": "#131313",
+    secondary: "#d1d1d1",
+    "secondary-foreground": "#4b4b4b",
+    muted: "#e1e1e1",
+    "muted-foreground": "#616161",
+    accent: "#d3d3d3",
+    "accent-foreground": "#333333",
     destructive: "#d73220",
     "destructive-foreground": "#ffffff",
-    border: "#e1e1e1",
-    input: "#c6c6c6",
+    border: "#bfbfbf",
+    input: "#d3d3d3",
     ring: "#4b75ff",
     favourite: "#af7400",
     "favourite-surface": "#f5c700",
     backdrop: "#000000",
     "badge-foreground": "#ffffff",
     "terminal-background": "#ffffff",
-    "terminal-foreground": "#292929",
-    "terminal-bar": "#f3f3f3",
-    "terminal-bar-foreground": "#292929",
-    "viz-grid": "#e1e1e1",
+    "terminal-foreground": "#4b4b4b",
+    "terminal-bar": "#d1d1d1",
+    "terminal-bar-foreground": "#4b4b4b",
+    "viz-grid": "#d1d1d1",
 
-    "viz-muted": "#8f8f8f",
-    "viz-good": "#079355",
-    "viz-warning": "#d29500",
-    "viz-critical": "#f03823",
+    "viz-muted": "#7e7e7e",
+    "viz-good": "#079053",
+    "viz-warning": "#a47400",
+    "viz-critical": "#eb3722",
     "viz-running": "#3b63fb",
-    "viz-merged": "#a65ce7",
+    "viz-merged": "#a35ae2",
     "ink-good": "#036e45",
     "ink-warning": "#865500",
     "ink-critical": "#b72818",
     "ink-running": "#274dea",
     "ink-merged": "#8628d9",
     "ink-agent": "#046691",
-    "ink-muted": "#505050",
+    "ink-muted": "#616161",
     "ink-repeat": "#056c5c",
     "ink-wakeup": "#ba1650",
-    "mode-manual": "#505050",
+    "mode-manual": "#616161",
     "mode-plan": "#056c5c",
     "mode-accept": "#8628d9",
     "mode-danger": "#b72818",
@@ -81,58 +84,58 @@ export const studio: Theme = {
     "kind-ssh": "#934d2b",
   },
   dark: {
-    background: "#1b1b1b",
-    foreground: "#dbdbdb",
-    card: "#222222",
-    "card-foreground": "#dbdbdb",
-    popover: "#222222",
-    "popover-foreground": "#dbdbdb",
-    primary: "#7ca9fc",
+    background: "#535353",
+    foreground: "#e3e3e3",
+    card: "#424242",
+    "card-foreground": "#e3e3e3",
+    popover: "#424242",
+    "popover-foreground": "#e3e3e3",
+    primary: "#aecafd",
     "primary-foreground": "#111111",
-    secondary: "#2c2c2c",
-    "secondary-foreground": "#dbdbdb",
-    muted: "#2c2c2c",
-    "muted-foreground": "#afafaf",
-    accent: "#323232",
-    "accent-foreground": "#f2f2f2",
+    secondary: "#6b6b6b",
+    "secondary-foreground": "#ffffff",
+    muted: "#4a4a4a",
+    "muted-foreground": "#cacaca",
+    accent: "#6b6b6b",
+    "accent-foreground": "#ffffff",
     destructive: "#fc432e",
     "destructive-foreground": "#111111",
-    border: "#393939",
-    input: "#444444",
+    border: "#383838",
+    input: "#6b6b6b",
     ring: "#5681ff",
     favourite: "#cb8d00",
     "favourite-surface": "#da9f00",
     backdrop: "#000000",
     "badge-foreground": "#111111",
-    "terminal-background": "#111111",
-    "terminal-foreground": "#dbdbdb",
-    "terminal-bar": "#222222",
-    "terminal-bar-foreground": "#dbdbdb",
-    "viz-grid": "#323232",
+    "terminal-background": "#282828",
+    "terminal-foreground": "#e3e3e3",
+    "terminal-bar": "#424242",
+    "terminal-bar-foreground": "#e3e3e3",
+    "viz-grid": "#5b5b5b",
 
-    "viz-muted": "#6d6d6d",
-    "viz-good": "#099d59",
-    "viz-warning": "#cb8d00",
-    "viz-critical": "#fc432e",
-    "viz-running": "#5681ff",
-    "viz-merged": "#ad69e9",
-    "ink-good": "#18c16e",
-    "ink-warning": "#da9f00",
-    "ink-critical": "#ff8678",
-    "ink-running": "#7ca9fc",
-    "ink-merged": "#c595f0",
-    "ink-agent": "#3fb1ff",
-    "ink-muted": "#afafaf",
-    "ink-repeat": "#0ebe9c",
-    "ink-wakeup": "#ff80ab",
-    "mode-manual": "#afafaf",
-    "mode-plan": "#0ebe9c",
-    "mode-accept": "#c595f0",
-    "mode-danger": "#ff8678",
-    "mode-auto": "#da9f00",
-    "kind-wsl": "#18c16e",
-    "kind-windows": "#7ca9fc",
-    "kind-cloud": "#c595f0",
-    "kind-ssh": "#dc9a76",
+    "viz-muted": "#a7a7a7",
+    "viz-good": "#4eb887",
+    "viz-warning": "#d29d24",
+    "viz-critical": "#fd8375",
+    "viz-running": "#82a2ff",
+    "viz-merged": "#c290ef",
+    "ink-good": "#7edcae",
+    "ink-warning": "#e9c566",
+    "ink-critical": "#ffb9b1",
+    "ink-running": "#aecafd",
+    "ink-merged": "#dbbdf6",
+    "ink-agent": "#8cd0ff",
+    "ink-muted": "#cacaca",
+    "ink-repeat": "#78dbc8",
+    "ink-wakeup": "#ffb3cd",
+    "mode-manual": "#cacaca",
+    "mode-plan": "#78dbc8",
+    "mode-accept": "#dbbdf6",
+    "mode-danger": "#ffb9b1",
+    "mode-auto": "#e9c566",
+    "kind-wsl": "#7edcae",
+    "kind-windows": "#aecafd",
+    "kind-cloud": "#dbbdf6",
+    "kind-ssh": "#e9c0aa",
   },
 };
