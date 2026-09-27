@@ -31,7 +31,7 @@ export const highContrast: Theme = {
     border: "#595959",
     input: "#000000",
     ring: "#c2007a",
-    favourite: "#b88600",
+    favourite: "#b48300",
     "favourite-surface": "#ffd84d",
     backdrop: "#000000",
     "badge-foreground": "#ffffff",

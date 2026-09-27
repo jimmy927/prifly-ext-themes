@@ -32,7 +32,7 @@ export const daylight: Theme = {
     border: "#ddd0b3",
     input: "#d4c5a4",
     ring: "#b3662e",
-    favourite: "#c28a00",
+    favourite: "#ab7900",
     "favourite-surface": "#f5d36b",
     backdrop: "#2b1d10",
     "badge-foreground": "#fffaf0",

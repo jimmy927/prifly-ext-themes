@@ -16,6 +16,7 @@ import {
 } from "./scripts/prifly-wire";
 import { themes } from "./src/index";
 import { manifest } from "./src/manifest";
+import { mix } from "./src/model-colours";
 import { BRUTALIST_SIGNATURE } from "./src/themes/brutalist";
 import type { Tokens } from "./src/types";
 
@@ -115,6 +116,21 @@ describe("every theme", () => {
         for (const surface of ["background", "card", "muted"]) {
           const ratio = contrast(tokens["primary"] ?? "", tokens[surface] ?? "");
           expect([surface, ratio >= 4.5]).toEqual([surface, true]);
+        }
+      });
+
+      // The favourite star, on a plain row and on a favourite's row, which
+      // prifly tints with favourite-surface (15% light, 25% dark; session-row.tsx).
+      // prifly's own check leaves the star out.
+      test(`${theme.name} (${mode}) favourite star stands out as an icon`, () => {
+        const tint = mode === "light" ? 0.15 : 0.25;
+        for (const surface of ["background", "card"]) {
+          const plain = tokens[surface] ?? "";
+          const tinted = mix(plain, tokens["favourite-surface"] ?? "", tint);
+          for (const under of [plain, tinted]) {
+            const ratio = contrast(tokens["favourite"] ?? "", under);
+            expect([surface, under, ratio >= 3]).toEqual([surface, under, true]);
+          }
         }
       });
 

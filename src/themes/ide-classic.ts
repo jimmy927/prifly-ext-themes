@@ -40,7 +40,7 @@ export const ideClassic: Theme = {
     border: "#dfe1e5",
     input: "#c9ccd6",
     ring: "#3574f0",
-    favourite: "#e0a000",
+    favourite: "#af7d00",
     "favourite-surface": "#fcd462",
     backdrop: "#000000",
     "badge-foreground": "#ffffff",

@@ -30,7 +30,7 @@ export const calm: Theme = {
     border: "#d7dee6",
     input: "#cdd5de",
     ring: "#6c8bab",
-    favourite: "#c29a3a",
+    favourite: "#a38131",
     "favourite-surface": "#ecd79a",
     backdrop: "#1a2330",
     "badge-foreground": "#ffffff",

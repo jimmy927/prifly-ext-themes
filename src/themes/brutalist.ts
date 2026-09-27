@@ -45,7 +45,7 @@ export const brutalist: Theme = {
     border: "#000000",
     input: "#000000",
     ring: "#2450ff",
-    favourite: "#ffb800",
+    favourite: "#ad7d00",
     "favourite-surface": "#ffd400",
     backdrop: BRUTALIST_SIGNATURE.backdrop,
     "badge-foreground": "#000000",

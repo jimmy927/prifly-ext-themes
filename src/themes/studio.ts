@@ -103,7 +103,7 @@ export const studio: Theme = {
     border: "#383838",
     input: "#6b6b6b",
     ring: "#5681ff",
-    favourite: "#cb8d00",
+    favourite: "#e3c175",
     "favourite-surface": "#da9f00",
     backdrop: "#000000",
     "badge-foreground": "#111111",
