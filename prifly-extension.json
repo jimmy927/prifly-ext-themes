@@ -5,9 +5,8 @@
   "version": "0.1.0",
   "skin": {
     "folder": "skin",
-    "styles": [
-      "brutalist.css"
-    ]
+    "styles": ["brutalist.css"],
+    "with": ["brutalist"]
   },
   "fonts": [
     {

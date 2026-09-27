@@ -53,7 +53,11 @@ describe("the manifest", () => {
     expect(parsed.id).toBe("themes");
     expect(parsed.themes.map((theme) => theme.id)).toEqual(Object.keys(MODES));
     expect(parsed.fonts.map((font) => font.id)).toEqual(["jetbrains-mono", "pixelify-sans"]);
-    expect(parsed.skin).toEqual({ folder: "skin", styles: ["brutalist.css"] });
+    expect(parsed.skin).toEqual({
+      folder: "skin",
+      styles: ["brutalist.css"],
+      with: ["brutalist"],
+    });
     expect(existsSync(join(root, "skin", "brutalist.css"))).toBe(true);
   });
 

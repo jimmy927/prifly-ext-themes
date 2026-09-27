@@ -38,7 +38,8 @@ export function manifest(version: string) {
     description:
       "Colour themes for prifly: High Contrast, Daylight, Calm, Solarized, Terminal, Game Boy, Brutalist, IDE Classic and Code Modern — with the fonts Terminal and Game Boy suggest, and Brutalist's frames and shadows.",
     version,
-    skin: { folder: "skin", styles: ["brutalist.css"] },
+    // Drawn only while Brutalist is: prifly leaves the sheet out under any other theme.
+    skin: { folder: "skin", styles: ["brutalist.css"], with: ["brutalist"] },
     fonts: fonts.map(fontEntry),
     themes: themes.map(themeEntry),
   };
