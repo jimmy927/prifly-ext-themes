@@ -1,6 +1,6 @@
 # Themes for prifly
 
-Nine colour themes for prifly, two fonts, and one skin. Every theme passes
+Ten colour themes for prifly, two fonts, and one skin. Every theme passes
 prifly's own theme check without a single note: nothing is reverted and
 nothing is flagged.
 
@@ -15,8 +15,9 @@ nothing is flagged.
 | **Brutalist** | light | Neo-brutalism: flat lemon, sky and pink blocks with pure black ink, thick black frames, hard shadows and square corners |
 | **IDE Classic** | light, dark | Inspired by JetBrains' IntelliJ Light and Darcula |
 | **Code Modern** | light, dark | Inspired by VS Code's Light Modern and Dark Modern |
+| **Studio** | light, dark | Inspired by Adobe's Spectrum 2: neutral greys, the bright accent blue and the creative apps' state colours |
 
-JetBrains, IntelliJ, Darcula and VS Code are their owners' names. These
+JetBrains, IntelliJ, Darcula, VS Code, Adobe and Spectrum are their owners' names. These
 themes only borrow the colours, so they have names of their own.
 
 ## Screenshots

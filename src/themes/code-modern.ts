@@ -4,8 +4,9 @@ import type { Theme } from "../types";
  * Code Modern: inspired by Visual Studio Code's Dark Modern and Light Modern
  * themes. The names are Microsoft's, so the theme has its own; the colours
  * follow theirs — the #181818 / #1f1f1f dark greys and the #f8f8f8 / white
- * light ones, the #0078d4 (dark) and #005fb8 (light) buttons and focus
- * rings, and the editor's own error, warning, info and "passed" colours for
+ * light ones, the #005fb8 light button, the #0078d4 focus rings, the #4daafc
+ * dark link blue as the dark primary (prifly draws links in the primary, and
+ * #0078d4 reads at only 3:1 as a word there), and the editor's own error, warning, info and "passed" colours for
  * the states, darkened or lifted only where a word would sit under 4.5:1.
  */
 export const codeModern: Theme = {
@@ -75,8 +76,8 @@ export const codeModern: Theme = {
     "card-foreground": "#cccccc",
     popover: "#202020",
     "popover-foreground": "#cccccc",
-    primary: "#0078d4",
-    "primary-foreground": "#ffffff",
+    primary: "#4daafc",
+    "primary-foreground": "#1f1f1f",
     secondary: "#313131",
     "secondary-foreground": "#cccccc",
     muted: "#2b2b2b",

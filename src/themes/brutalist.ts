@@ -14,6 +14,11 @@ export const BRUTALIST_SIGNATURE = { backdrop: "#010101", "viz-grid": "#000000" 
  * Brutalist, after neo-brutalist web design: flat, loud colour blocks — a
  * lemon yellow, a sky blue, a bubblegum pink — on off-white, all inked in
  * pure black. Light only: pure black ink is the point.
+ *
+ * The primary is an electric blue, not the lemon: prifly draws links in the
+ * primary, and yellow words vanish on off-white. The lemon stays as the
+ * header block (the skin paints it from `favourite-surface`) and the
+ * terminal bar.
  */
 export const brutalist: Theme = {
   id: "brutalist",
@@ -27,8 +32,8 @@ export const brutalist: Theme = {
     "card-foreground": "#000000",
     popover: "#ffffff",
     "popover-foreground": "#000000",
-    primary: "#ffd400",
-    "primary-foreground": "#000000",
+    primary: "#2450ff",
+    "primary-foreground": "#ffffff",
     secondary: "#a6e1ff",
     "secondary-foreground": "#000000",
     muted: "#fff4e0",

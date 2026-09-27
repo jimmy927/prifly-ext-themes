@@ -36,6 +36,7 @@ const MODES: Record<string, string[]> = {
   brutalist: ["light"],
   "ide-classic": ["light", "dark"],
   "code-modern": ["light", "dark"],
+  studio: ["light", "dark"],
 };
 
 const modesOf = (theme: { light?: Tokens; dark?: Tokens }) =>
@@ -106,6 +107,15 @@ describe("every theme", () => {
         const { notes, tokens: kept } = validateTheme(declared, mode);
         expect(notes).toEqual([]);
         expect(Object.keys(kept).length).toBe(Object.keys(tokens).length);
+      });
+
+      // prifly draws links and commit hashes in the primary, also inside an
+      // inline-code chip (muted); its own check only pairs it with its foreground.
+      test(`${theme.name} (${mode}) primary reads as link text`, () => {
+        for (const surface of ["background", "card", "muted"]) {
+          const ratio = contrast(tokens["primary"] ?? "", tokens[surface] ?? "");
+          expect([surface, ratio >= 4.5]).toEqual([surface, true]);
+        }
       });
 
       test(`${theme.name} (${mode}) sets every token, leaning on none of prifly's`, () => {

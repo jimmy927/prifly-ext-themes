@@ -6,7 +6,9 @@ import type { Theme } from "../types";
  * colours follow theirs:
  *
  * - dark: the #2b2b2b editor and #3c3f41 tool windows, #bbbbbb labels, the
- *   #365880 default button; states from the editor scheme — string green,
+ *   #589df6 link blue, lifted so a link reads on the code-chip grey (the
+ *   #365880 default button is too dark to be link text, and prifly draws
+ *   links in the primary); states from the editor scheme — string green,
  *   keyword orange, number blue, the #9876aa purple — lifted where a word
  *   would sit under 4.5:1 on the tool-window grey.
  * - light: the new UI's #f7f8fa panels around a white editor, the #3574f0
@@ -80,8 +82,8 @@ export const ideClassic: Theme = {
     "card-foreground": "#bbbbbb",
     popover: "#3c3f41",
     "popover-foreground": "#bbbbbb",
-    primary: "#365880",
-    "primary-foreground": "#e8e8e8",
+    primary: "#88baf9",
+    "primary-foreground": "#1e1e1e",
     secondary: "#4c5052",
     "secondary-foreground": "#d0d0d0",
     muted: "#45494a",

@@ -19,7 +19,8 @@ import type { Theme } from "../types";
  * - Bars, dots and buttons keep the published accents where they reach 3:1
  *   (4.5:1 under a word); the rest are nudged a step: the light blue and
  *   green fills, the dark red, violet and grey fills, and the dark primary
- *   and destructive buttons.
+ *   and destructive buttons. The primary is lifted to 4.5:1 on the card too,
+ *   since prifly draws links in it.
  */
 export const solarized: Theme = {
   id: "solarized",
@@ -33,7 +34,7 @@ export const solarized: Theme = {
     "card-foreground": "#073642",
     popover: "#fdf6e3",
     "popover-foreground": "#073642",
-    primary: "#1f6fa8",
+    primary: "#1d6aa1",
     "primary-foreground": "#fdf6e3",
     secondary: "#eee8d5",
     "secondary-foreground": "#073642",
@@ -88,7 +89,7 @@ export const solarized: Theme = {
     "card-foreground": "#93a1a1",
     popover: "#073642",
     "popover-foreground": "#93a1a1",
-    primary: "#3794d6",
+    primary: "#56a8e2",
     "primary-foreground": "#002b36",
     secondary: "#073642",
     "secondary-foreground": "#93a1a1",

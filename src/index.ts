@@ -9,6 +9,7 @@ import { gameBoy } from "./themes/game-boy";
 import { highContrast } from "./themes/high-contrast";
 import { ideClassic } from "./themes/ide-classic";
 import { solarized } from "./themes/solarized";
+import { studio } from "./themes/studio";
 import { terminal } from "./themes/terminal";
 import type { Theme } from "./types";
 
@@ -23,6 +24,7 @@ export const themes: Theme[] = [
   brutalist,
   ideClassic,
   codeModern,
+  studio,
 ].map(withModelColours);
 
 export { fonts };
