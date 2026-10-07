@@ -17,6 +17,7 @@ import {
 import { themes } from "./src/index";
 import { manifest } from "./src/manifest";
 import { mix } from "./src/model-colours";
+import { contrastOf, distanceOf, SERIES_APART, SERIES_CONTRAST } from "./src/series-colours";
 import { BRUTALIST_SIGNATURE } from "./src/themes/brutalist";
 import type { Tokens } from "./src/types";
 
@@ -132,6 +133,25 @@ describe("every theme", () => {
             expect([surface, under, ratio >= 3]).toEqual([surface, under, true]);
           }
         }
+      });
+
+      // The pie: eight slices, each readable on the card and background and
+      // apart from the others, with one label colour readable on all of them.
+      test(`${theme.name} (${mode}) pie colours are readable and apart, with a readable label`, () => {
+        const slices = [1, 2, 3, 4, 5, 6, 7, 8].map((n) => tokens[`viz-series-${n}`] ?? "");
+        const ink = tokens["viz-series-ink"] ?? "";
+        expect(ink).toBe(tokens["primary-foreground"] ?? "");
+        slices.forEach((slice, i) => {
+          for (const surface of ["card", "background"]) {
+            const ratio = contrastOf(slice, tokens[surface] ?? "");
+            expect([i + 1, surface, ratio >= SERIES_CONTRAST]).toEqual([i + 1, surface, true]);
+          }
+          expect([i + 1, contrastOf(ink, slice) >= 3]).toEqual([i + 1, true]);
+          slices.slice(i + 1).forEach((other, j) => {
+            const gap = distanceOf(slice, other);
+            expect([i + 1, i + j + 2, gap >= SERIES_APART]).toEqual([i + 1, i + j + 2, true]);
+          });
+        });
       });
 
       test(`${theme.name} (${mode}) sets every token, leaning on none of prifly's`, () => {

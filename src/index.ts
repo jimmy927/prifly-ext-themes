@@ -1,6 +1,8 @@
 /** The extension's themes, in the order the picker lists them, and its fonts. */
 import { fonts } from "./fonts";
 import { withModelColours } from "./model-colours";
+import { withSeriesColours } from "./series-colours";
+import { withSeriesColours } from "./series-colours";
 import { brutalist } from "./themes/brutalist";
 import { calm } from "./themes/calm";
 import { codeModern } from "./themes/code-modern";
@@ -13,7 +15,8 @@ import { studio } from "./themes/studio";
 import { terminal } from "./themes/terminal";
 import type { Theme } from "./types";
 
-// Each with its model swatches' colours, from its own palette (`model-colours.ts`).
+// Each with its model swatches' and pie colours, from its own palette
+// (`model-colours.ts`, `series-colours.ts`).
 export const themes: Theme[] = [
   highContrast,
   daylight,
@@ -25,6 +28,6 @@ export const themes: Theme[] = [
   ideClassic,
   codeModern,
   studio,
-].map(withModelColours);
+].map(withModelColours).map(withSeriesColours);
 
 export { fonts };
