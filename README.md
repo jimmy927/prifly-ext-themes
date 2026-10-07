@@ -118,6 +118,6 @@ It asserts that:
 - every theme has the modes it promises;
 - the host has no warnings for any theme;
 - every mode sets all 61 tokens and passes `validateTheme` with no notes;
-- every mode's eight pie colours are 3:1 against the card and background and at least 0.08 apart in OKLab, and the label on a slice is 3:1 against all of them;
+- every mode's eight pie colours are 3:1 against the card and background and at least 0.08 apart in OKLab, and the label on a slice is 4.5:1 against all of them;
 - High Contrast has 7:1 text and a focus ring at 4.5:1 or better on every surface;
 - the skin is keyed to Brutalist's signature only and stays stackable.

@@ -5,7 +5,8 @@
  *
  * prifly's own order is blue, orange, green, red, purple, cyan, pink, olive.
  * Each slot takes the first of its candidate tokens that reads against both
- * the card and the background (3:1) and is far enough in OKLab from every
+ * the card and the background (3:1), carries the label at 4.5:1 (stepped away
+ * from the ink where it does not) and is far enough in OKLab from every
  * earlier slot. A slot none of its candidates fits takes its first readable
  * candidate mixed toward the foreground (else black, else white) until it is
  * apart. The label is the mode's `primary-foreground`.
@@ -30,6 +31,8 @@ const SLOTS: readonly (readonly string[])[] = [
 
 /** The least contrast a slice has against the card and the background. */
 export const SERIES_CONTRAST = 3;
+/** The least contrast the label has against a slice. */
+export const SERIES_INK_CONTRAST = 4.5;
 /** The least OKLab distance between two slices. */
 export const SERIES_APART = 0.08;
 
@@ -83,12 +86,25 @@ function slices(t: Tokens): string[] {
   const foreground = need("foreground");
   const readable = (c: string) =>
     contrastOf(c, card) >= SERIES_CONTRAST && contrastOf(c, background) >= SERIES_CONTRAST;
+  const ink = need("primary-foreground");
+  const edge = contrastOf(ink, "#000000") > contrastOf(ink, "#ffffff") ? "#000000" : "#ffffff";
   const picked: string[] = [];
   const apart = (c: string) => picked.every((p) => distanceOf(p, c) >= SERIES_APART);
+  // A slice the label reads on (4.5:1): stepped away from the ink, keeping its
+  // hue, while it stays readable on the surfaces and apart from earlier slices.
+  const settle = (c: string): string | undefined => {
+    for (let step = 0; step <= 40; step++) {
+      const candidate = step === 0 ? c : mix(c, edge, step / 40);
+      if (contrastOf(candidate, ink) >= SERIES_INK_CONTRAST) {
+        return readable(candidate) && apart(candidate) ? candidate : undefined;
+      }
+    }
+    return undefined;
+  };
 
   for (const slot of SLOTS) {
     const options = slot.flatMap((name) => (t[name] === undefined ? [] : [need(name)]));
-    const first = options.find((c) => readable(c) && apart(c));
+    const first = options.map(settle).find((c) => c !== undefined);
     if (first !== undefined) {
       picked.push(first);
       continue;
@@ -103,8 +119,9 @@ function slices(t: Tokens): string[] {
       for (const base of bases) {
         for (let step = 1; step <= 20; step++) {
           const candidate = mix(base, toward, step / 20);
-          if (readable(candidate) && apart(candidate)) {
-            chosen = candidate;
+          const settled = settle(candidate);
+          if (settled !== undefined) {
+            chosen = settled;
             break search;
           }
         }

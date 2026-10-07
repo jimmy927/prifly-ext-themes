@@ -17,7 +17,7 @@ import {
 import { themes } from "./src/index";
 import { manifest } from "./src/manifest";
 import { mix } from "./src/model-colours";
-import { contrastOf, distanceOf, SERIES_APART, SERIES_CONTRAST } from "./src/series-colours";
+import { contrastOf, distanceOf, SERIES_APART, SERIES_CONTRAST, SERIES_INK_CONTRAST } from "./src/series-colours";
 import { BRUTALIST_SIGNATURE } from "./src/themes/brutalist";
 import type { Tokens } from "./src/types";
 
@@ -146,7 +146,7 @@ describe("every theme", () => {
             const ratio = contrastOf(slice, tokens[surface] ?? "");
             expect([i + 1, surface, ratio >= SERIES_CONTRAST]).toEqual([i + 1, surface, true]);
           }
-          expect([i + 1, contrastOf(ink, slice) >= 3]).toEqual([i + 1, true]);
+          expect([i + 1, contrastOf(ink, slice) >= SERIES_INK_CONTRAST]).toEqual([i + 1, true]);
           slices.slice(i + 1).forEach((other, j) => {
             const gap = distanceOf(slice, other);
             expect([i + 1, i + j + 2, gap >= SERIES_APART]).toEqual([i + 1, i + j + 2, true]);
