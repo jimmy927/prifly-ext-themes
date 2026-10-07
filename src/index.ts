@@ -2,7 +2,6 @@
 import { fonts } from "./fonts";
 import { withModelColours } from "./model-colours";
 import { withSeriesColours } from "./series-colours";
-import { withSeriesColours } from "./series-colours";
 import { brutalist } from "./themes/brutalist";
 import { calm } from "./themes/calm";
 import { codeModern } from "./themes/code-modern";

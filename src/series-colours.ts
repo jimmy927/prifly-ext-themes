@@ -113,8 +113,8 @@ function slices(t: Tokens): string[] {
     // black, then white, for a palette whose foreground is itself taken), a
     // twentieth at a time, until it is apart and still readable.
     const bases = options.filter(readable);
-    let chosen = bases[0] ?? options[0];
-    if (chosen === undefined) throw new Error(`the palette has none of ${slot.join(", ")}`);
+    if (options.length === 0) throw new Error(`the palette has none of ${slot.join(", ")}`);
+    let chosen: string | undefined;
     search: for (const toward of [foreground, "#000000", "#ffffff"]) {
       for (const base of bases) {
         for (let step = 1; step <= 20; step++) {
@@ -126,6 +126,9 @@ function slices(t: Tokens): string[] {
           }
         }
       }
+    }
+    if (chosen === undefined) {
+      throw new Error(`no colour for slot ${picked.length + 1} (${slot.join(", ")}) fits the palette`);
     }
     picked.push(chosen);
   }
