@@ -105,6 +105,10 @@ bun run report    # prifly's check for every theme; `bun run report calm` adds a
 bun test          # everything below
 ```
 
+The model swatches (`model-*`) and the pie colours (`viz-series-*`) are not
+written in the palettes: `src/model-colours.ts` and `src/series-colours.ts`
+derive them from each theme's own states, so a recoloured state recolours them.
+
 The test imports prifly's own checker and manifest reader from a prifly
 checkout. That is `~/src/prifly` by default; set `PRIFLY_REPO` to use another.
 It asserts that:
@@ -113,6 +117,7 @@ It asserts that:
 - prifly reads every theme, font and the skin;
 - every theme has the modes it promises;
 - the host has no warnings for any theme;
-- every mode sets all 52 tokens and passes `validateTheme` with no notes;
+- every mode sets all 61 tokens and passes `validateTheme` with no notes;
+- every mode's eight pie colours are 3:1 against the card and background and at least 0.08 apart in OKLab, and the label on a slice is 4.5:1 against all of them;
 - High Contrast has 7:1 text and a focus ring at 4.5:1 or better on every surface;
 - the skin is keyed to Brutalist's signature only and stays stackable.

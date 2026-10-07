@@ -122,7 +122,16 @@
         "--model-sonnet-2": "#440637",
         "--model-haiku-0": "#007a00",
         "--model-haiku-1": "#005e00",
-        "--model-haiku-2": "#004400"
+        "--model-haiku-2": "#004400",
+        "--viz-series-1": "#0047d6",
+        "--viz-series-2": "#a16800",
+        "--viz-series-3": "#007a00",
+        "--viz-series-4": "#c20000",
+        "--viz-series-5": "#6a1fc2",
+        "--viz-series-6": "#004d5c",
+        "--viz-series-7": "#7a0a63",
+        "--viz-series-8": "#6b3f00",
+        "--viz-series-ink": "#ffffff"
       },
       "dark": {
         "--background": "#000000",
@@ -191,7 +200,16 @@
         "--model-sonnet-2": "#ffd2f5",
         "--model-haiku-0": "#3dd13d",
         "--model-haiku-1": "#77df77",
-        "--model-haiku-2": "#a8eaa8"
+        "--model-haiku-2": "#a8eaa8",
+        "--viz-series-1": "#66a3ff",
+        "--viz-series-2": "#ffc21a",
+        "--viz-series-3": "#3dd13d",
+        "--viz-series-4": "#ff5c5c",
+        "--viz-series-5": "#b894ff",
+        "--viz-series-6": "#66e6ff",
+        "--viz-series-7": "#ff9ce9",
+        "--viz-series-8": "#c2c2c2",
+        "--viz-series-ink": "#000000"
       }
     },
     {
@@ -265,7 +283,16 @@
         "--model-sonnet-2": "#501a3e",
         "--model-haiku-0": "#3f8f2a",
         "--model-haiku-1": "#316e20",
-        "--model-haiku-2": "#235018"
+        "--model-haiku-2": "#235018",
+        "--viz-series-1": "#3a74b8",
+        "--viz-series-2": "#926919",
+        "--viz-series-3": "#398126",
+        "--viz-series-4": "#c0412e",
+        "--viz-series-5": "#8a5cae",
+        "--viz-series-6": "#1c6470",
+        "--viz-series-7": "#8f2f6e",
+        "--viz-series-8": "#824a00",
+        "--viz-series-ink": "#fffaf0"
       }
     },
     {
@@ -339,7 +366,16 @@
         "--model-sonnet-2": "#49283e",
         "--model-haiku-0": "#5c9a6c",
         "--model-haiku-1": "#477753",
-        "--model-haiku-2": "#34563c"
+        "--model-haiku-2": "#34563c",
+        "--viz-series-1": "#5279a2",
+        "--viz-series-2": "#8b7037",
+        "--viz-series-3": "#4c7f59",
+        "--viz-series-4": "#b05c56",
+        "--viz-series-5": "#5f5189",
+        "--viz-series-6": "#2f6875",
+        "--viz-series-7": "#9a4050",
+        "--viz-series-8": "#75581d",
+        "--viz-series-ink": "#ffffff"
       },
       "dark": {
         "--background": "#14191f",
@@ -408,7 +444,16 @@
         "--model-sonnet-2": "#eed6e5",
         "--model-haiku-0": "#6fae80",
         "--model-haiku-1": "#9ac6a6",
-        "--model-haiku-2": "#bedbc6"
+        "--model-haiku-2": "#bedbc6",
+        "--viz-series-1": "#7ea3c9",
+        "--viz-series-2": "#d9b56a",
+        "--viz-series-3": "#6fae80",
+        "--viz-series-4": "#d0817b",
+        "--viz-series-5": "#b8abd9",
+        "--viz-series-6": "#86c2cf",
+        "--viz-series-7": "#e39aa6",
+        "--viz-series-8": "#7c8793",
+        "--viz-series-ink": "#10161c"
       }
     },
     {
@@ -482,7 +527,16 @@
         "--model-sonnet-2": "#63153b",
         "--model-haiku-0": "#849700",
         "--model-haiku-1": "#667400",
-        "--model-haiku-2": "#4a5500"
+        "--model-haiku-2": "#4a5500",
+        "--viz-series-1": "#2076b2",
+        "--viz-series-2": "#8c6a00",
+        "--viz-series-3": "#587517",
+        "--viz-series-4": "#d1302d",
+        "--viz-series-5": "#5157a8",
+        "--viz-series-6": "#17756e",
+        "--viz-series-7": "#b0266a",
+        "--viz-series-8": "#695511",
+        "--viz-series-ink": "#fdf6e3"
       },
       "dark": {
         "--background": "#002b36",
@@ -551,7 +605,16 @@
         "--model-sonnet-2": "#f7bcd7",
         "--model-haiku-0": "#859900",
         "--model-haiku-1": "#aab84d",
-        "--model-haiku-2": "#c8d18c"
+        "--model-haiku-2": "#c8d18c",
+        "--viz-series-1": "#3694d5",
+        "--viz-series-2": "#b58900",
+        "--viz-series-3": "#859900",
+        "--viz-series-4": "#e56665",
+        "--viz-series-5": "#8589ce",
+        "--viz-series-6": "#3fc2b6",
+        "--viz-series-7": "#ee6ba6",
+        "--viz-series-8": "#d6a520",
+        "--viz-series-ink": "#002b36"
       }
     },
     {
@@ -626,7 +689,16 @@
         "--model-sonnet-2": "#ffcbf1",
         "--model-haiku-0": "#33e066",
         "--model-haiku-1": "#70e994",
-        "--model-haiku-2": "#a3f1ba"
+        "--model-haiku-2": "#a3f1ba",
+        "--viz-series-1": "#33c7ff",
+        "--viz-series-2": "#ffb000",
+        "--viz-series-3": "#33e066",
+        "--viz-series-4": "#ff4d4d",
+        "--viz-series-5": "#c28cff",
+        "--viz-series-6": "#66ffe0",
+        "--viz-series-7": "#ff8ce0",
+        "--viz-series-8": "#2fb052",
+        "--viz-series-ink": "#031006"
       }
     },
     {
@@ -701,7 +773,16 @@
         "--model-sonnet-2": "#340629",
         "--model-haiku-0": "#0f380f",
         "--model-haiku-1": "#0c2b0c",
-        "--model-haiku-2": "#081f08"
+        "--model-haiku-2": "#081f08",
+        "--viz-series-1": "#15307a",
+        "--viz-series-2": "#623700",
+        "--viz-series-3": "#0f380f",
+        "--viz-series-4": "#7a0f0f",
+        "--viz-series-5": "#4a1a7a",
+        "--viz-series-6": "#003a45",
+        "--viz-series-7": "#5c0a4a",
+        "--viz-series-8": "#432600",
+        "--viz-series-ink": "#9bbc0f"
       }
     },
     {
@@ -775,7 +856,16 @@
         "--model-sonnet-2": "#5b0044",
         "--model-haiku-0": "#00a244",
         "--model-haiku-1": "#007d34",
-        "--model-haiku-2": "#005b26"
+        "--model-haiku-2": "#005b26",
+        "--viz-series-1": "#376fe6",
+        "--viz-series-2": "#926d00",
+        "--viz-series-3": "#008638",
+        "--viz-series-4": "#df342a",
+        "--viz-series-5": "#8a5cd0",
+        "--viz-series-6": "#006a80",
+        "--viz-series-7": "#a3007a",
+        "--viz-series-8": "#804d00",
+        "--viz-series-ink": "#ffffff"
       }
     },
     {
@@ -849,7 +939,16 @@
         "--model-sonnet-2": "#5b0d3c",
         "--model-haiku-0": "#208a3c",
         "--model-haiku-1": "#196a2e",
-        "--model-haiku-2": "#124d22"
+        "--model-haiku-2": "#124d22",
+        "--viz-series-1": "#326ee4",
+        "--viz-series-2": "#9b6d00",
+        "--viz-series-3": "#1f873b",
+        "--viz-series-4": "#ce4145",
+        "--viz-series-5": "#a348b3",
+        "--viz-series-6": "#00627a",
+        "--viz-series-7": "#a3176c",
+        "--viz-series-8": "#6c707e",
+        "--viz-series-ink": "#ffffff"
       },
       "dark": {
         "--background": "#2b2b2b",
@@ -918,7 +1017,16 @@
         "--model-sonnet-2": "#f2cde7",
         "--model-haiku-0": "#769166",
         "--model-haiku-1": "#9fb294",
-        "--model-haiku-2": "#c1ceba"
+        "--model-haiku-2": "#c1ceba",
+        "--viz-series-1": "#6897bb",
+        "--viz-series-2": "#cc7832",
+        "--viz-series-3": "#769166",
+        "--viz-series-4": "#e25e5b",
+        "--viz-series-5": "#9d7dae",
+        "--viz-series-6": "#6ecfd6",
+        "--viz-series-7": "#e38fc9",
+        "--viz-series-8": "#e8a060",
+        "--viz-series-ink": "#1e1e1e"
       }
     },
     {
@@ -992,7 +1100,16 @@
         "--model-sonnet-2": "#62007b",
         "--model-haiku-0": "#388a34",
         "--model-haiku-1": "#2b6a28",
-        "--model-haiku-2": "#1f4d1d"
+        "--model-haiku-2": "#1f4d1d",
+        "--viz-series-1": "#1774df",
+        "--viz-series-2": "#996d02",
+        "--viz-series-3": "#358331",
+        "--viz-series-4": "#e51400",
+        "--viz-series-5": "#8a4fd0",
+        "--viz-series-6": "#257b94",
+        "--viz-series-7": "#af00db",
+        "--viz-series-8": "#616161",
+        "--viz-series-ink": "#ffffff"
       },
       "dark": {
         "--background": "#181818",
@@ -1061,7 +1178,16 @@
         "--model-sonnet-2": "#edbfed",
         "--model-haiku-0": "#2ea043",
         "--model-haiku-1": "#6dbd7b",
-        "--model-haiku-2": "#a1d4aa"
+        "--model-haiku-2": "#a1d4aa",
+        "--viz-series-1": "#3794ff",
+        "--viz-series-2": "#cca700",
+        "--viz-series-3": "#2ea043",
+        "--viz-series-4": "#f85149",
+        "--viz-series-5": "#b180d7",
+        "--viz-series-6": "#4ec9b0",
+        "--viz-series-7": "#d295d2",
+        "--viz-series-8": "#9d9d9d",
+        "--viz-series-ink": "#1f1f1f"
       }
     },
     {
@@ -1135,7 +1261,16 @@
         "--model-sonnet-2": "#680c2d",
         "--model-haiku-0": "#079053",
         "--model-haiku-1": "#056f40",
-        "--model-haiku-2": "#04512e"
+        "--model-haiku-2": "#04512e",
+        "--viz-series-1": "#3b63fb",
+        "--viz-series-2": "#9c6e00",
+        "--viz-series-3": "#06854d",
+        "--viz-series-4": "#df3420",
+        "--viz-series-5": "#9753d1",
+        "--viz-series-6": "#046691",
+        "--viz-series-7": "#ba1650",
+        "--viz-series-8": "#865500",
+        "--viz-series-ink": "#ffffff"
       },
       "dark": {
         "--background": "#535353",
@@ -1204,7 +1339,16 @@
         "--model-sonnet-2": "#ffdde9",
         "--model-haiku-0": "#4eb887",
         "--model-haiku-1": "#83cdab",
-        "--model-haiku-2": "#afdfc9"
+        "--model-haiku-2": "#afdfc9",
+        "--viz-series-1": "#82a2ff",
+        "--viz-series-2": "#d29d24",
+        "--viz-series-3": "#4eb887",
+        "--viz-series-4": "#fd8375",
+        "--viz-series-5": "#c290ef",
+        "--viz-series-6": "#8cd0ff",
+        "--viz-series-7": "#ffb3cd",
+        "--viz-series-8": "#e9c566",
+        "--viz-series-ink": "#111111"
       }
     }
   ]
