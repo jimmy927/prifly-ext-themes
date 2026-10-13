@@ -121,3 +121,9 @@ It asserts that:
 - every mode's eight pie colours are 3:1 against the card and background and at least 0.08 apart in OKLab, and the label on a slice is 4.5:1 against all of them;
 - High Contrast has 7:1 text and a focus ring at 4.5:1 or better on every surface;
 - the skin is keyed to Brutalist's signature only and stays stackable.
+
+## License and contributing
+
+Source-available under the Functional Source License 1.1 with an Apache 2.0 future license (`LICENSE.md`): use it, change it and fix it freely, but not to offer a competing product. Each version becomes Apache 2.0 two years after its release.
+
+Pull requests are welcome. Before one can be merged, its author signs the contributor agreement (`CLA.md`), which assigns the copyright in the contribution to The Startup Factory AB; the CLA bot asks for it on the pull request.
